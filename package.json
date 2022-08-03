@@ -1,8 +1,13 @@
 {
   "name": "next-minimal-setup",
   "version": "1.0.0",
-  "author": "Jason Lengstorf <jason@lengstorf.com>",
   "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "next": "^12.2.3",
     "react": "^17.0.1",
