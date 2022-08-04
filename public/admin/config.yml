@@ -3,8 +3,6 @@ backend:
     repo: denisso/next-minimal-setup
     branch: main
 media_folder: "public/img"
-media_library:
-    name: uploads
 public_folder: "img"
 collections:
     - name: "pages"
