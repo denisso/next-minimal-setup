@@ -1,8 +1,8 @@
 ---
 title: Hello world
 date: 2022-08-05T06:25:55.388Z
-cats:
-  - name: cats
-    description: content cats
+cats: []
 ---
-My first page
+My page
+
+![face](public/img/face.jpg)
