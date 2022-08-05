@@ -6,7 +6,3 @@ cats:
     description: content cats
 ---
 My first page
-
-```css
-.test{ background:white; } 
-```
