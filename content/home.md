@@ -5,4 +5,4 @@ cats: []
 ---
 My page
 
-![face](public/img/face.jpg)
+![face](img/face.jpg)
