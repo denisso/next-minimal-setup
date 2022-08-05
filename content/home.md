@@ -5,4 +5,4 @@ cats: []
 ---
 My page
 
-![face](img/face.jpg)
+![icon](public/img/note005_icon.png)
