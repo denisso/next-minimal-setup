@@ -14,7 +14,7 @@ collections:
             fields:
                 - { label: "Name", name: "name", widget: "string" }
                 - { label: "Photo", name: "photo", widget: "image" }
-                - { label: "Birthday", name: "birthday", widget: "datetime" }
+                - { label: "Birthday", name: "birthday", widget: "date" }
                 - { label: "Body", name: "body", widget: "markdown" }
                 - label: "Jobs"
                   name: "jobs"
@@ -24,9 +24,9 @@ collections:
                       - {
                             label: "Date From",
                             name: "dateFrom",
-                            widget: "datetime",
+                            widget: "date",
                         }
-                      - { label: "Date To", name: "dateTo", widget: "datetime" }
+                      - { label: "Date To", name: "dateTo", widget: "date" }
                       - {
                             label: "Description",
                             name: "description",
