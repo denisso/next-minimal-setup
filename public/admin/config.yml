@@ -41,9 +41,9 @@ collections:
   - name: posts
     label: Post
     editor:
-      preview: true
+      preview: false
     folder: content/posts
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}-{{categories}}-{{date}}"
     create: true # Allow users to create new documents in this collection
     sortable_fields: ["categories", "date"]
     fields: # The fields each document in this collection have
