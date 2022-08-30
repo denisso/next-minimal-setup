@@ -4,6 +4,7 @@ backend:
     branch: main
 media_folder: "public/img"
 public_folder: "/img"
+preview: false
 collections:
   - name: "pages"
     label: "Pages"
