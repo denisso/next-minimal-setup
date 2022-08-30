@@ -45,7 +45,7 @@ collections:
     folder: content/posts
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
-    filter: {field: "categories", value: "en"}
+    filter: {field: "categories"}
     fields: # The fields each document in this collection have
       - {label: Title, name: title, widget: string}
       - label: 'Status'
