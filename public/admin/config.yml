@@ -12,17 +12,28 @@ collections:
             name: "home"
             file: "content/home.md"
             fields:
-                - { label: "Title", name: "title", widget: "string" }
-                - {label: "Image", name: "image", widget: "image"  }
-                - { label: "Publish Date", name: "date", widget: "datetime" }
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Photo", name: "photo", widget: "image" }
+                - { label: "Birthday", name: "birthday", widget: "datetime" }
                 - { label: "Body", name: "body", widget: "markdown" }
-                - label: "Cats"
-                  name: "cats"
+                - label: "Jobs"
+                  name: "jobs"
                   widget: "list"
                   fields:
-                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Company", name: "company", widget: "string" }
+                      - {
+                            label: "Date From",
+                            name: "dateFrom",
+                            widget: "datetime",
+                        }
+                      - { label: "Date To", name: "dateTo", widget: "datetime" }
                       - {
                             label: "Description",
                             name: "description",
+                            widget: "string",
+                        }
+                      - {
+                            label: "Responsibilities",
+                            name: "responsibilities",
                             widget: "text",
                         }
