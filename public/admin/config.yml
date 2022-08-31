@@ -1,73 +1,91 @@
 backend:
-    name: github
-    repo: denisso/next-minimal-setup
-    branch: main
-media_folder: "public/img"
-public_folder: "/img"
+  name: github
+  repo: denisso/next-minimal-setup
+  branch: main
+media_folder: public/img
+public_folder: /img
 preview: false
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: pages
+    label: Pages
     editor:
       - preview: false
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-        - { label: "Name", name: "name", widget: "string" }
-        - { label: "Photo", name: "photo", widget: "image" }
-        - { label: "Birthday", name: "birthday", widget: "date" }
-        - { label: "Body", name: "body", widget: "markdown" }
-        - label: "Skills"
-          name: "skills"
-        - label: "Jobs"
-          name: "jobs"
-          widget: "list"
-          fields:
-            - { label: "Company", name: "company", widget: "string" }
-            - {
-                  label: "Date From",
-                  name: "dateFrom",
-                  widget: "date",
-              }
-            - { label: "Date To", name: "dateTo", widget: "date" }
-            - {
-                  label: "Description",
-                  name: "description",
-                  widget: "string",
-              }
-            - {
-                  label: "Responsibilities",
-                  name: "responsibilities",
-                  widget: "text",
-              }
-  - name: "posts"
-    label: "Post"
+      - label: Home
+        name: home
+        file: content/home.md
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Photo
+            name: photo
+            widget: image
+          - label: Birthday
+            name: birthday
+            widget: date
+          - label: Body
+            name: body
+            widget: markdown
+          - label: Skills
+            name: skills
+          - label: Jobs
+            name: jobs
+            widget: list
+            fields:
+              - label: Company
+                name: company
+                widget: string
+              - label: Date From
+                name: dateFrom
+                widget: date
+              - label: Date To
+                name: dateTo
+                widget: date
+              - label: Description
+                name: description
+                widget: string
+              - label: Responsibilities
+                name: responsibilities
+                widget: text
+  - name: posts
+    label: Post
     editor:
       - preview: false
-    folder: "content/posts"
-    create: true 
-    sortable_fields: ["date"]
+    folder: content/posts
+    create: true
+    sortable_fields:
+      - date
     delete: true
-    fields: 
-      - {label: "Title", name: "title", widget: "string"}
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ["Published", "Featured", "Draft"]
-        default: 'Published'
-      - {label: Date / Order, name: date, widget: date}
-      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
-      - {label: Content, name: body, widget: markdown}
-          - label: "Notes"
-            name: "notes"
-            widget: "list"
-            fields:
-                - { label: "Note", name: "notename", widget: "string" }
-                - {
-                      label: "Description",
-                      name: "description",
-                      widget: "text",
-                  }
-   
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Status
+        name: status
+        widget: select
+        options:
+          - Published
+          - Featured
+          - Draft
+        default: Published
+      - label: Date / Order
+        name: date
+        widget: date
+      - label: Post Featured Image
+        name: postFeaturedImage
+        widget: image
+        required: false
+      - label: Content
+        name: body
+        widget: markdown
+      - label: Notes
+        name: notes
+        widget: list
+        fields:
+          - label: Note
+            name: notename
+            widget: string
+          - label: Description
+            name: description
+            widget: text
