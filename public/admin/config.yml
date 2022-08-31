@@ -9,7 +9,7 @@ collections:
   - name: "pages"
     label: "Pages"
     editor:
-      - {preview: false}
+      preview: false
     files:
     - label: "Home"
       name: "home"
@@ -45,7 +45,7 @@ collections:
   - name: "posts"
     label: "Post"
     editor:
-      - {preview: false}
+      preview: false
     folder: "content/posts"
     create: true 
     sortable_fields: ["date"]
