@@ -8,6 +8,8 @@ preview: false
 collections:
   - name: "pages"
     label: "Pages"
+    editor:
+      - preview: false
     files:
     - label: "Home"
       name: "home"
@@ -17,6 +19,8 @@ collections:
           - { label: "Photo", name: "photo", widget: "image" }
           - { label: "Birthday", name: "birthday", widget: "date" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Skills"
+            name: "skills"
           - label: "Jobs"
             name: "jobs"
             widget: "list"
@@ -36,6 +40,34 @@ collections:
                 - {
                       label: "Responsibilities",
                       name: "responsibilities",
+                      widget: "text",
+                  }
+  - name: "posts"
+    label: "Post"
+    editor:
+      - preview: false
+    folder: "content/posts"
+    create: true 
+    sortable_fields: ["date"]
+    delete: true
+    fields: 
+      - {label: Title, name: title, widget: string}
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ["Published", "Featured", "Draft"]
+        default: 'Published'
+      - {label: Date / Order, name: date, widget: date}
+      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
+      - {label: Content, name: body, widget: markdown}
+          - label: "Notes"
+            name: "notes"
+            widget: "list"
+            fields:
+                - { label: "Note", name: "notename", widget: "string" }
+                - {
+                      label: "Description",
+                      name: "description",
                       widget: "text",
                   }
    
