@@ -6,36 +6,33 @@ media_folder: "public/img"
 public_folder: "/img"
 preview: false
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
-      fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Photo", name: "photo", widget: "image" }
-          - { label: "Birthday", name: "birthday", widget: "date" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Jobs"
-            name: "jobs"
-            widget: "list"
-            fields:
-                - { label: "Company", name: "company", widget: "string" }
-                - {
-                      label: "Date From",
-                      name: "dateFrom",
-                      widget: "date",
-                  }
-                - { label: "Date To", name: "dateTo", widget: "date" }
-                - {
-                      label: "Description",
-                      name: "description",
-                      widget: "string",
-                  }
-                - {
-                      label: "Responsibilities",
-                      name: "responsibilities",
-                      widget: "text",
-                  }
+  - label: "Home"
+    name: "home"
+    file: "content/home.md"
+    fields:
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Photo", name: "photo", widget: "image" }
+        - { label: "Birthday", name: "birthday", widget: "date" }
+        - { label: "Body", name: "body", widget: "markdown" }
+        - label: "Jobs"
+          name: "jobs"
+          widget: "list"
+          fields:
+              - { label: "Company", name: "company", widget: "string" }
+              - {
+                    label: "Date From",
+                    name: "dateFrom",
+                    widget: "date",
+                }
+              - { label: "Date To", name: "dateTo", widget: "date" }
+              - {
+                    label: "Description",
+                    name: "description",
+                    widget: "string",
+                }
+              - {
+                    label: "Responsibilities",
+                    name: "responsibilities",
+                    widget: "text",
+                }
    
