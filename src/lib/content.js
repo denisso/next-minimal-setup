@@ -1,10 +1,12 @@
 import fs from "fs";
-import path from "path"
+import path from "path";
 const filesDirectory = path.join(process.cwd(), "content/posts");
 export const getFilesList = () => {
     let list = [];
     try {
         list = fs.readdirSync(filesDirectory);
-    } catch (e) {}
+    } catch (e) {
+        list.push(`error: ${e.message}`);
+    }
     return list;
 };
