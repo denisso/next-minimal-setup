@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-const filesDirectory = path.join(process.cwd(), "content/posts");
+const filesDirectory = path.join(process.cwd());
 export const getFilesList = () => {
     let list = [];
     try {
