@@ -1,17 +1,19 @@
-import { counter } from "../lib/utils";
+import { getFileList,runWatch } from "../lib/content";
 
-const Home = ({ counter }) => {
-    return <article>{counter}</article>;
+const Home = ({ content }) => {
+    console.log(JSON.stringify(content))
+    return <article>{content instanceof Object && Object.entries(content).length}</article>;
 };
 
 export default Home;
 
 export async function getStaticProps() {
-
+    console.log("getStaticProps", getFileList())
+    runWatch()
     return {
         props: {
-            counter,
+            content: getFileList(),
         },
-        revalidate: 100,
+        revalidate: 5,
     };
 }
