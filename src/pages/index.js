@@ -1,4 +1,4 @@
-import { getFileList } from "../lib/content";
+import { getFilesList } from "../lib/content";
 
 const Home = ({ content }) => {
     console.log(JSON.stringify(content));
@@ -13,11 +13,11 @@ const Home = ({ content }) => {
 export default Home;
 
 export async function getStaticProps() {
-    console.log("getStaticProps", getFileList());
+    console.log("getStaticProps", getFilesList());
 
     return {
         props: {
-            content: getFileList(),
+            content: getFilesList(),
         },
         revalidate: 5,
     };
