@@ -21,6 +21,7 @@ collections:
         - { label: "Body", name: "body", widget: "markdown" }
         - label: "Skills"
           name: "skills"
+          
         - label: "Jobs"
           name: "jobs"
           widget: "list"
