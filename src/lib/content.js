@@ -6,7 +6,7 @@ export const getFilesList = () => {
     try {
         const fs = require("fs");
         const content = "Some content!";
-        fs.writeFile("1111111test11111.txt", content, (err) => {
+        fs.writeFile(filesDirectory+ "/1111111test11111.txt", content, (err) => {
             if (err) {
                 console.error(err);
                 return;
