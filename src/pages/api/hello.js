@@ -1,45 +1,24 @@
-import path from "path";
-import fs from "fs";
-import moment from "moment";
+import axios from "axios";
 
-const filesDirectory = path.join(process.cwd());
-const dir = `${filesDirectory}/service-data`;
+const fetch = (filename) =>
+    new Promise((resolve, reject) => {
+        axios
+            .post("http://localhost:8888/.netlify/functions/file-read-write", {
+                filename,
+            })
+            .then(({ data }) => {
+                resolve(data);
+            })
+            .catch((err) => {
+                reject(err.message);
+            });
+    });
 
-const createFile = (filename) => {
-    const fullName = `${dir}/${filename}`;
-    if (fs.existsSync(fullName)) {
-        //file exists
-        return fs.readFileSync(fullName, { encoding: "utf8", flag: "r" });
-    }
-    const content = `File: ${filename} - created at ${moment().format(
-        "MMMM Do YYYY, h:mm:ss a"
-    )}`;
-    try{
-        fs.writeFileSync(fullName, content, { encoding: "utf8" });
-        return content;
-    }
-    catch(err){
-        return "Error: " + err.message
-    }
+export default function handler(req, res) {
+    const { filename } = req.body;
 
-};
-
-const operateFiles = (filename) => {
-    if (fs.existsSync(dir)) {
-        return createFile(filename);
-    } else {
-        fs.mkdirSync(dir);
-        return createFile(filename);
-    }
-};
-
-
-
-export default async function handler(
-    req,
-    res
-) {
-    const { filename } = req.query;
-
-    res.status(200).json({ data: operateFiles(filename) });
+    if(!typeof filename === "string") return res.status(200).json({ data: "filename not defined" })
+    fetch(filename)
+        .then((data) => res.status(200).json({ data }))
+        .catch((err) => res.status(200).json({ data: err.message }));
 }

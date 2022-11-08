@@ -3,7 +3,10 @@
   command = "next build"
   functions = "netlify/functions"
   publish = ".next"
-
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 3000
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
