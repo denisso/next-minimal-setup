@@ -1,5 +1,6 @@
 import { getFilesList } from "../lib/content";
 import { attributes } from "../../content/home.md";
+import { Component } from "../components/Component";
 
 const Home = ({ content }) => {
     console.log(JSON.stringify(content));
@@ -7,6 +8,7 @@ const Home = ({ content }) => {
     return (
         <>
             <div>{title}</div>
+            <div><Component/></div>
             <article>
                 {content instanceof Array &&
                     content.map((e) => <div key={e}>{e}</div>)}
